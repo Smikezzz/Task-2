@@ -14,12 +14,12 @@ namespace TASK1
 
         public GameEngine()
         {
-            MAP = new Map(4, 10, 4, 10, 3); //solid values for now
+            MAP = new Map(4, 10, 4, 10, 3);
         }
 
         public bool MovePlayer(Character.Movement direction)
         {
-            //wasn't this already coded?
+
         }
 
 

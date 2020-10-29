@@ -9,11 +9,13 @@ namespace TASK1
     class Map
     {
         private int[,] tile;
-        private Hero hero; //how am i gonna enter these values?
+        private Hero hero;
         private int[] enemy;
         private int width;
         private int height;
         private Random r = new Random();
+
+        private int[] item;
 
         public int[,] TILE { get => tile; set => tile = value; }
         public Hero HERO { get => hero; set => hero = value; }
@@ -22,7 +24,9 @@ namespace TASK1
         public int HEIGHT { get => height; set => height = value; }
         public Random R { get => r; set => r = value; }
 
-        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemy)
+        public int[] ITEM { get => item; set => item = value; }
+
+        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemy, int gold)
         {
             enemy = r.Next(2, 5 + 1);
 
@@ -41,36 +45,34 @@ namespace TASK1
                 {
                     for (int k = 0; k < this.HEIGHT; k++)
                     {
-                        //Enemy goblin = new Enemy(goblin.X, goblin.Y, 1, 10, 10, 'G');
-                        //UpdateVision(goblin);
+                        UpdateVision(enemy);
                     }
                 }
             }
+            UpdateVision(hero);
 
-            //Character hero = new Character(hero.X, hero.Y, 'H');
-            UpdateVision(hero); //not sure what the question meant if it should be placed inside the loop or outside
+            int[] item = new int[gold];
         }
 
         public void UpdateVision(Character unit)
         {
-            int north, east, south, west;
-            //north
+            int north, east, south, west;   //trying to figure this out
             north = unit.CharVis[unit.X, unit.Y - 1];
-            //east
             east = unit.CharVis[unit.X + 1, unit.Y];
-            //south
             south = unit.CharVis[unit.X, unit.Y + 1];
-            //west
             west = unit.CharVis[unit.X - 1, unit.Y];
-            //p.s this is very wrong, i have to figure this out
         }
 
         private Tile Create(Tile.TileType type)
         {
             int x, y;
 
+            int gold;
+
             x = r.Next(this.WIDTH, this.HEIGHT);
             y = r.Next(this.WIDTH, this.HEIGHT);
+
+            gold = r.Next(1, 5 + 1);
 
             while (TILE[x,y] == '.')    //very unsure about this
             {
@@ -78,6 +80,13 @@ namespace TASK1
                 y = r.Next(this.WIDTH, this.HEIGHT);
 
                 //TILE[x, y] = type; 
+
+                for (int i = 0; i < gold; i++)
+                {
+                    x = r.Next(this.WIDTH, this.HEIGHT);
+                    y = r.Next(this.WIDTH, this.HEIGHT);
+                    TILE[x, y] = 'O';
+                }
             }
         }
     }
