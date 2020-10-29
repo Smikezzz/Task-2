@@ -8,14 +8,13 @@ namespace TASK1
 {
     class Hero : Character
     {
-        public Hero(int x, int y, int hp, int maxHp, int dmg) : base(x, y, 'H')
+        public Hero(int x, int y, int hp, int maxHp) : base(x, y, 'H')
         {
-            dmg = 2;
             this.X = x;
             this.Y = y;
             this.HP = hp;
             this.MaxHP = maxHp;
-            this.DMG = dmg;
+            this.DMG = 2;
         }
 
         public override Movement ReturnMove(Movement move)
