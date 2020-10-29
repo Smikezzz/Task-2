@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Task1
+namespace TASK1
 {
     public partial class frmGame : Form
     {
@@ -17,7 +17,7 @@ namespace Task1
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmGame_Load(object sender, EventArgs e)
         {
             
         }

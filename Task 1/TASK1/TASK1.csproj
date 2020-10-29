@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76604E85-8690-4453-8447-4D29E799713D}</ProjectGuid>
+    <ProjectGuid>{F2E79243-5AAB-4A76-AAD1-23A0DC9A9836}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Task1</RootNamespace>
-    <AssemblyName>Task1</AssemblyName>
+    <RootNamespace>TASK1</RootNamespace>
+    <AssemblyName>TASK1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,23 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class Tile.cs" />
-    <Compile Include="Class Obstacle.cs" />
-    <Compile Include="Class EmptyTile.cs" />
-    <Compile Include="Class Character.cs" />
-    <Compile Include="Class Enemy.cs" />
-    <Compile Include="Class Goblin.cs" />
-    <Compile Include="Class Hero.cs" />
-    <Compile Include="Class Map.cs" />
-    <Compile Include="Class GameEngine.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="EmptyTile.cs" />
+    <Compile Include="Enemy.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameEngine.cs" />
+    <Compile Include="Goblin.cs" />
+    <Compile Include="Hero.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Obstacle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tile.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
