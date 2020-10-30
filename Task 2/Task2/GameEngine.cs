@@ -22,6 +22,14 @@ namespace TASK1
 
         }
 
+        public void EnemyAttacks()
+        {
+            
+        }
 
+        public void MoveEnemies()
+        {
+
+        }
     }
 }
