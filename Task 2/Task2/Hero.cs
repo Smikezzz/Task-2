@@ -32,7 +32,7 @@ namespace TASK1
         public override string ToString()
         {
             string output;
-            output = "\n" + "Player stats:" + "\n" + "HP: " + this.HP + "/" + this.MaxHP + "\n" + "Damage: " + this.DMG + "\n" + "[" + this.X + ", " + this.Y + "]";
+            output = "\n" + "Player stats:" + "\n" + "HP: " + this.HP + "/" + this.MaxHP + "\n" + "Damage: " + this.DMG + "\n" + "[" + this.X + ", " + this.Y + "]" + "\n + Gold: " + this.GOLD_PURSE;
             return output;
         }
     }

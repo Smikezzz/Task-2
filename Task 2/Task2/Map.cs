@@ -15,7 +15,7 @@ namespace TASK1
         private int height;
         private Random r = new Random();
 
-        private int[] item;
+        private int[,] item;
 
         public int[,] TILE { get => tile; set => tile = value; }
         public Hero HERO { get => hero; set => hero = value; }
@@ -24,7 +24,7 @@ namespace TASK1
         public int HEIGHT { get => height; set => height = value; }
         public Random R { get => r; set => r = value; }
 
-        public int[] ITEM { get => item; set => item = value; }
+        public int[,] ITEM { get => item; set => item = value; }
 
         public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemy, int gold)
         {
@@ -86,6 +86,26 @@ namespace TASK1
                     x = r.Next(this.WIDTH, this.HEIGHT);
                     y = r.Next(this.WIDTH, this.HEIGHT);
                     TILE[x, y] = 'O';
+                }
+            }
+        }
+
+        public Item GetItemAtPosition(int x, int y)
+        {
+            for (int i = 0; i < ITEM.Length; i++)
+            {
+                if (ITEM[x, y] == 'G')
+                {
+                    ITEM[x, y] = '.';
+                    return ;    //What and how to return?
+                }
+                else
+                {
+                    if (ITEM[x, y] == 'W')
+                    {
+                        ITEM[x, y] = '.';
+                        return ;    //What and how to return?
+                    }
                 }
             }
         }

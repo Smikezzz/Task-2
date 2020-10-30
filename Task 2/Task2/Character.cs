@@ -11,12 +11,16 @@ namespace TASK1
         protected int HP;
         protected int MAX_HP;
         protected int DMG;
-        protected int[,] CHAR_VIS;  //not sure if the array should be int or char
+        protected int[,] CHAR_VIS;
+
+        protected int goldPurse;
 
         public int Hp { get => HP; set => HP = value; }
         public int MaxHP { get => MAX_HP; set => MAX_HP = value; }
         public int Dmg { get => DMG; set => DMG = value; }
         public int[,] CharVis { get => CHAR_VIS; set => CHAR_VIS = value; }
+
+        public int GOLD_PURSE { get => goldPurse; set => goldPurse = value; }
 
         public enum Movement
         {
@@ -105,12 +109,20 @@ namespace TASK1
 
         public abstract Movement ReturnMove(Movement move = 0)
         {
-            //how do i incorporate the vision array? (2.3)
+            //(2.3)
         }
 
         public abstract override string ToString()
         {
-            //i have no idea what to do here (2.3)
+            //(2.3)
+        }
+
+        public void PickUp(Item i)
+        {
+            if (i = Gold.TileType.GOLD) //???
+            {
+                this.GOLD_PURSE += 1;
+            }
         }
     }
 }
