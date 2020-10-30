@@ -74,7 +74,7 @@ namespace TASK1
 
             gold = r.Next(1, 5 + 1);
 
-            while (TILE[x,y] == '.')    //very unsure about this
+            while (TILE[x,y] == '.')    
             {
                 x = r.Next(this.WIDTH, this.HEIGHT);
                 y = r.Next(this.WIDTH, this.HEIGHT);

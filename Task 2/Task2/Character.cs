@@ -109,13 +109,10 @@ namespace TASK1
 
         public abstract Movement ReturnMove(Movement move = 0)
         {
-            //(2.3)
+            return move;
         }
 
-        public abstract override string ToString()
-        {
-            //(2.3)
-        }
+        public abstract override string ToString();
 
         public void PickUp(Item i)
         {
@@ -123,6 +120,29 @@ namespace TASK1
             {
                 this.GOLD_PURSE += 1;
             }
+        }
+
+        public bool MovePlayer(Character.Movement direction)
+        {
+            bool move = false;
+
+            bool loot = false;
+
+            if (direction == Character.Movement.NONE)
+            {
+                loot = false;
+            }
+            else
+            {
+                loot = true;
+            }
+
+            if (loot == true)
+            {
+                this.GOLD_PURSE += 1;
+            }
+
+            return move;
         }
     }
 }
